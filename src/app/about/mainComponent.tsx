@@ -215,13 +215,3 @@ const About = () => {
 }
 export default About;
 
-
-import About from './page';
-const Home = () => {
-    return (
-        <>
-            </>
-    )
-}
-
-export default Home;
