@@ -6,8 +6,8 @@ import { motion } from 'framer-motion';
 const Home = () => {
   const services = [
     {
-      title: "Company Formation",
-      description: "Complete company registration services including PTY LTD formation, MOI drafting, and CIPC compliance.",
+      title: "Custom Business Formation & Structure",
+      description: "Complete company registration(PTY LTD), Beneficial ownership(CIPC), Memorandum of Incorporation, and business structuring services tailored to your needs.",
       icon: (
         <svg fill="currentColor" viewBox="0 0 20 20">
           <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4zM18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" />
@@ -69,8 +69,26 @@ const Home = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="hero-section">
-        <Container className="hero-content">
+      <section style={{
+        minHeight: '100vh',
+        backgroundImage: 'url(https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        position: 'relative',
+        overflow: 'hidden'
+      }}>
+        <div style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          background: 'linear-gradient(135deg, rgba(96, 116, 97, 0.9) 0%, rgba(79, 97, 80, 0.8) 10%)',
+          zIndex: 1
+        }}></div>
+        
+        <Container style={{ position: 'relative', zIndex: 2, paddingTop: '100px' }}>
           <Row className="align-items-center min-vh-100">
             <Col lg={6}>
               <motion.div
@@ -78,15 +96,49 @@ const Home = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <h1 className="hero-title">
-                  Legal Support <span className="highlight">Without Barriers</span>
-                </h1>
-                <p className="hero-subtitle">
-                  We democratize legal access and empower every entrepreneur to build compliant, successful businesses with our comprehensive legal support services.
-                </p>
+                <h1 style={{
+                  fontSize: '3.5rem',
+                  fontWeight: '800',
+                  lineHeight: '1.2',
+                  marginBottom: '2rem',
+                  color: 'white',
+                  textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
+                }}>
+                Legal Support Without Barriers</h1>
+                <p style={{
+                  fontSize: '1.3rem',
+                  color: 'rgba(255, 255, 255, 0.95)',
+                  marginBottom: '3rem',
+                  lineHeight: '1.6',
+                  textShadow: '1px 1px 2px rgba(0,0,0,0.2)'
+                }}>
+	Comprehensive legal support
+services ,specializing in providing essential
+business documentation, compliance assistance,
+Marketing, and corporate structuring services 
+across South Africa.                </p>
                 <div className="d-flex flex-wrap gap-3">
-                  <Button className="btn-primary-custom">Get Started</Button>
-                  <Button className="btn-outline-custom">Learn More</Button>
+                  <Button style={{
+                    background: 'linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%)',
+                    border: 'none',
+                    color: '#4CAF50',
+                    padding: '12px 30px',
+                    borderRadius: '50px',
+                    fontWeight: '600',
+                    fontSize: '1.1rem',
+                    transition: 'all 0.3s ease',
+                    boxShadow: '0 4px 15px rgba(255,255,255,0.3)'
+                  }}>Get Started</Button>
+                  <Button style={{
+                    border: '2px solid rgba(255,255,255,0.9)',
+                    color: 'white',
+                    background: 'transparent',
+                    padding: '12px 30px',
+                    borderRadius: '50px',
+                    fontWeight: '500',
+                    fontSize: '1.1rem',
+                    transition: 'all 0.3s ease'
+                  }}>Learn More</Button>
                 </div>
               </motion.div>
             </Col>
@@ -100,16 +152,40 @@ const Home = () => {
                 <div style={{
                   width: '100%',
                   height: '400px',
-                  background: 'linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%)',
                   borderRadius: '20px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '2rem',
-                  color: 'white',
-                  fontWeight: 'bold'
+                  overflow: 'hidden',
+                  boxShadow: '0 20px 40px rgba(0,0,0,0.3)',
+                  backgroundImage: 'url(https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80)',
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  position: 'relative'
                 }}>
-                  Fiduciary Partners
+                  <div style={{
+                    position: 'absolute',
+                    bottom: 0,
+                    left: 0,
+                    right: 0,
+                    background: 'linear-gradient(to top, rgba(76, 175, 80, 0.9) 0%, transparent 100%)',
+                    padding: '30px',
+                    color: 'white'
+                  }}>
+                    <h3 style={{
+                      fontSize: '1.8rem',
+                      fontWeight: 'bold',
+                      margin: 0,
+                      textShadow: '1px 1px 2px rgba(0,0,0,0.5)'
+                    }}>
+                      Fiduciary Partners
+                    </h3>
+                    <p style={{
+                      margin: 0,
+                      fontSize: '1rem',
+                      opacity: 0.9,
+                      textShadow: '1px 1px 2px rgba(0,0,0,0.5)'
+                    }}>
+                      Your Legal Success Partners
+                    </p>
+                  </div>
                 </div>
               </motion.div>
             </Col>
@@ -216,4 +292,4 @@ const Home = () => {
   );
 };
 
-export default Home;  
+export default Home;

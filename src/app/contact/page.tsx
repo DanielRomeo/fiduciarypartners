@@ -142,8 +142,26 @@ This message was sent from the Fiduciary Partners contact form.`;
   return (
     <>
       {/* Hero Section */}
-      <section className="hero-section" style={{ minHeight: '60vh' }}>
-        <Container className="hero-content">
+      <section style={{ 
+        minHeight: '60vh',
+        backgroundImage: 'url(https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        position: 'relative',
+        display: 'flex',
+        alignItems: 'center'
+      }}>
+        <div style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(76, 175, 80, 0.8)',
+          zIndex: 1
+        }}></div>
+        <Container style={{ position: 'relative', zIndex: 2 }}>
           <Row className="align-items-center justify-content-center text-center">
             <Col lg={8}>
               <motion.div
@@ -151,10 +169,21 @@ This message was sent from the Fiduciary Partners contact form.`;
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <h1 className="hero-title">
-                  Get In <span className="highlight">Touch</span>
+                <h1 style={{
+                  fontSize: '3.5rem',
+                  fontWeight: '800',
+                  color: 'white',
+                  marginBottom: '2rem',
+                  textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
+                }}>
+                  Get In Touch
                 </h1>
-                <p className="hero-subtitle">
+                <p style={{
+                  fontSize: '1.3rem',
+                  color: 'white',
+                  marginBottom: '3rem',
+                  textShadow: '1px 1px 2px rgba(0,0,0,0.3)'
+                }}>
                   Ready to discuss your legal needs? We're here to help you build a compliant and successful business. Contact us today for a consultation.
                 </p>
               </motion.div>
