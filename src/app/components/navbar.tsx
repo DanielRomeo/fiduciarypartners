@@ -26,6 +26,11 @@ const Navbar = () => {
                 About
               </Nav.Link>
             </Link>
+            <Link href="/about" passHref legacyBehavior>
+              <Nav.Link className={pathname === '/pricing' ? 'active' : ''}>
+                Pricing
+              </Nav.Link>
+            </Link>
             <Link href="/contact" passHref legacyBehavior>
               <Nav.Link className={pathname === '/contact' ? 'active' : ''}>
                 Contact
