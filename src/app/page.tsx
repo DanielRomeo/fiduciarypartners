@@ -72,7 +72,7 @@ const Home = () => {
 
   return (
     <>
-	<Navbar></Navbar>
+	{/* <Navbar></Navbar> */}
     <div className={styles.home}>
       {/* Hero Carousel */}
       <Carousel fade interval={4000} controls indicators>

@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 // import './globals.css';
 // import './styles/main.scss'; 
-import Navbar from './components/navbar';
+import NavbarMain from './components/navbar';
 import Footer from './components/footer';
 import { Geist, Geist_Mono } from "next/font/google";
 
@@ -27,7 +27,7 @@ export default function RootLayout({ children }: any) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <Navbar />
+        <NavbarMain />
         <main style={{ paddingTop: '80px' }}>
           {children}
         </main>

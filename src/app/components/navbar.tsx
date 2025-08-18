@@ -1,9 +1,10 @@
-'use client'
+'use client';
 import React, { useState } from 'react';
-import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
+import { Nav, NavDropdown, Navbar, Container } from 'react-bootstrap';
+import Link from 'next/link';
 import styles from '../styles/navbar.module.scss';
 
-const NavbarComponent: React.FC = () => {
+const NavbarMain: React.FC = () => {
   const [expanded, setExpanded] = useState(false);
 
   const services = [
@@ -19,7 +20,7 @@ const NavbarComponent: React.FC = () => {
     'Employment & Employee Benefits',
     'Environment',
     'Environmental, Social & Governance (ESG)',
-    'Financial Services Regulation',
+    'Financial Services NavbarRegulation',
     'Forensic Services',
     'Fund Formation',
     'Government & Public Entities',
@@ -43,79 +44,57 @@ const NavbarComponent: React.FC = () => {
   const handleSelect = () => setExpanded(false);
 
   return (
-    <Navbar 
-      expand="lg" 
-      className={styles.navbar} 
-      expanded={expanded}
-      onToggle={handleToggle}
-      fixed="top"
-    >
-      <Container fluid className={styles.navbarContainer}>
-        <Navbar.Brand href="#home" className={styles.brand}>
-          <div className={styles.brandContent}>
-            <span className={styles.brandMain}>FIDUCIARY PARTNERS</span>
-            <span className={styles.brandSub}>in alliance with Macbase</span>
-          </div>
+    <Navbar expanded={expanded} onToggle={handleToggle} expand="lg" className={styles.navbarContainer} fixed="top">
+      <Container fluid>
+        <Navbar.Brand as={Link} href="/" className={styles.navbarBrand} onClick={handleSelect}>
+          <div className={styles.logoText}>FIDUCIARY PARTNERS</div>
+          <div className={styles.subText}>in alliance with Macbase</div>
         </Navbar.Brand>
-
-        <div className={styles.contactInfo}>
-          <div className={styles.locations}>
-            <span className={styles.location}>Polokwane</span>
-            {/* <span className={styles.location}>Cape Town</span> */}
-          </div>
-          <div className={styles.phoneNumbers}>
-            <span className={styles.phone}>+27 (0) 11 530 5000</span>
-            {/* <span className={styles.phone}>+27 (0) 21 431 7000</span> */}
-          </div>
-        </div>
-
-        <Navbar.Toggle 
-          aria-controls="basic-navbar-nav" 
-          className={styles.navbarToggle}
-        />
-        
-        <Navbar.Collapse id="basic-navbar-nav" className={styles.navbarCollapse}>
-          <Nav className={`ms-auto ${styles.navLinks}`} onSelect={handleSelect}>
-            <Nav.Link href="#home" className={styles.navLink}>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" className={styles.navbarToggle} />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link as={Link} href="/" onClick={handleSelect} className={styles.navLink}>
               HOME
             </Nav.Link>
-            
-            <NavDropdown 
-              title="EXPERTISE" 
-              id="expertise-dropdown" 
+            <NavDropdown
+              title="Services"
+              id="basic-nav-dropdown"
               className={styles.navDropdown}
-              show={undefined}
+              onSelect={handleSelect}
             >
-              <div className={styles.dropdownContent}>
-                <div className={styles.servicesSection}>
-                  <h6 className={styles.sectionTitle}>Services</h6>
-                  <div className={styles.servicesList}>
-                    {services.map((service, index) => (
-                      <NavDropdown.Item 
-                        key={index}
-                        href={`#service-${index}`}
-                        className={styles.dropdownItem}
-                      >
-                        {service}
-                      </NavDropdown.Item>
-                    ))}
-                  </div>
-                </div>
-              </div>
+              {services.map((service, index) => {
+                const href = `/services/${service.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
+                return (
+                  <NavDropdown.Item
+                    key={index}
+                    as={Link}
+                    href={href}
+                    className={styles.dropdownItem}
+                  >
+                    {service}
+                  </NavDropdown.Item>
+                );
+              })}
             </NavDropdown>
-
-            <Nav.Link href="#about" className={styles.navLink}>
+            <Nav.Link as={Link} href="/about" onClick={handleSelect} className={styles.navLink}>
               ABOUT
             </Nav.Link>
-            
-            <Nav.Link href="#contact" className={styles.navLink}>
+            <Nav.Link as={Link} href="/contact" onClick={handleSelect} className={styles.navLink}>
               CONTACT
             </Nav.Link>
           </Nav>
+          <div className={styles.contactInfo}>
+            <div className={styles.contactItem}>
+              <span className={styles.location}>Polokwane</span>
+            </div>
+            <div className={styles.contactItem}>
+              <span className={styles.phone}>+27 (0) 11 530 5000</span>
+            </div>
+          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
 };
 
-export default NavbarComponent;
+export default NavbarMain;
