@@ -1,0 +1,195 @@
+@import '../styles/main2.scss';
+
+// Footer styles
+.footerCustom {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: $secondary-color;
+  padding: 60px 0 30px;
+  border-top: 3px solid $primary-color;
+  
+  .footerBrand {
+    font-weight: 700;
+    font-size: 1.75rem;
+    background: $gradient-primary;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    
+    .brandIcon {
+      color: $primary-color;
+      font-size: 1.5rem;
+      -webkit-text-fill-color: $primary-color;
+    }
+  }
+  
+  .footerHeading {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 30px;
+      height: 2px;
+      background: $gradient-primary;
+    }
+  }
+  
+  .footerLink {
+    color: rgba($secondary-color, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: block;
+    padding: 0.25rem 0;
+    font-size: 0.9rem;
+    
+    &:hover {
+      color: $primary-color;
+      padding-left: 8px;
+      transform: translateX(4px);
+    }
+  }
+  
+  .contactInfo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    color: rgba($secondary-color, 0.9);
+    
+    svg {
+      width: 18px;
+      height: 18px;
+      margin-right: 12px;
+      color: $primary-color;
+      flex-shrink: 0;
+    }
+    
+    span {
+      font-size: 0.95rem;
+    }
+  }
+  
+  .socialLinks {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    
+    .socialLink {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba($primary-color, 0.1);
+      border: 1px solid rgba($primary-color, 0.3);
+      border-radius: 8px;
+      color: $primary-color;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      
+      svg {
+        font-size: 1.1rem;
+      }
+      
+      &:hover {
+        background: $primary-color;
+        color: #ffffff;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba($primary-color, 0.3);
+      }
+    }
+  }
+  
+  .regulatoryInfo {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    border-left: 4px solid $primary-color;
+    
+    .regulatoryIcon {
+      color: $primary-color;
+      font-size: 1.5rem;
+      margin-top: 0.25rem;
+      flex-shrink: 0;
+    }
+    
+    p {
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.4;
+      
+      strong {
+        color: #ffffff;
+      }
+    }
+  }
+  
+  .footerDivider {
+    border: none;
+    height: 1px;
+    background: linear-gradient(90deg, 
+      transparent 0%, 
+      rgba($primary-color, 0.3) 20%, 
+      rgba($primary-color, 0.7) 50%, 
+      rgba($primary-color, 0.3) 80%, 
+      transparent 100%
+    );
+    margin: 2rem 0 1.5rem;
+  }
+  
+  // Responsive adjustments
+  @media (max-width: 768px) {
+    padding: 40px 0 20px;
+    
+    .footerBrand {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    
+    .socialLinks {
+      justify-content: center;
+      margin-top: 1rem;
+    }
+    
+    .regulatoryInfo {
+      flex-direction: column;
+      text-align: center;
+      gap: 0.75rem;
+    }
+    
+    .footerHeading {
+      text-align: center;
+      
+      &::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+  
+  // Bottom section
+  .row:last-child {
+    p {
+      color: rgba($secondary-color, 0.7);
+      font-size: 0.85rem;
+      
+      @media (max-width: 768px) {
+        text-align: center !important;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}

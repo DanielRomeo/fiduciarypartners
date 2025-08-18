@@ -1,0 +1,281 @@
+@import '../styles/main2';
+
+.navbar {
+  background-color: $secondary-color;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-bottom: 3px solid $primary-color;
+  padding: 0.5rem 0;
+  min-height: 80px;
+  
+  .navbarContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+
+    @media (max-width: 991px) {
+      padding: 0 1rem;
+    }
+  }
+
+  .brand {
+    text-decoration: none;
+    color: $text-color;
+    
+    &:hover {
+      text-decoration: none;
+      color: $primary-color;
+    }
+
+    .brandContent {
+      display: flex;
+      flex-direction: column;
+      
+      .brandMain {
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: $text-color;
+        letter-spacing: 1px;
+        
+        @media (max-width: 768px) {
+          font-size: 1.2rem;
+        }
+      }
+      
+      .brandSub {
+        font-size: 0.75rem;
+        color: $medium-gray;
+        font-style: italic;
+        margin-top: -2px;
+        
+        @media (max-width: 768px) {
+          font-size: 0.65rem;
+        }
+      }
+    }
+  }
+
+  .contactInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 0.85rem;
+    color: $medium-gray;
+    
+    @media (max-width: 1200px) {
+      display: none;
+    }
+
+    .locations {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2px;
+      
+      .location {
+        color: $text-color;
+        font-weight: 500;
+      }
+    }
+
+    .phoneNumbers {
+      display: flex;
+      gap: 1rem;
+      
+      .phone {
+        color: $medium-gray;
+      }
+    }
+  }
+
+  .navbarToggle {
+    border: none;
+    padding: 0.25rem 0.5rem;
+    
+    &:focus {
+      box-shadow: none;
+    }
+    
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='#{$text-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+  }
+
+  .navbarCollapse {
+    @media (max-width: 991px) {
+      background-color: $secondary-color;
+      margin-top: 1rem;
+      padding: 1rem 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .navLinks {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    
+    @media (max-width: 991px) {
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+    }
+
+    .navLink {
+      color: $text-color !important;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      padding: 0.75rem 1rem;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      letter-spacing: 0.5px;
+      
+      &:hover {
+        color: $primary-color !important;
+        background-color: rgba($primary-color, 0.1);
+      }
+
+      @media (max-width: 991px) {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+        border-bottom: 1px solid $light-gray;
+        
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  .navDropdown {
+    .dropdown-toggle {
+      color: $text-color !important;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      padding: 0.75rem 1rem;
+      border: none;
+      background: transparent;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      letter-spacing: 0.5px;
+      
+      &:hover {
+        color: $primary-color !important;
+        background-color: rgba($primary-color, 0.1);
+      }
+      
+      &:focus {
+        box-shadow: none;
+      }
+
+      &::after {
+        margin-left: 0.5rem;
+        border-top: 0.3em solid;
+        border-right: 0.3em solid transparent;
+        border-bottom: 0;
+        border-left: 0.3em solid transparent;
+      }
+    }
+
+    .dropdown-menu {
+      background-color: $secondary-color;
+      border: 1px solid rgba($primary-color, 0.2);
+      border-radius: 8px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      padding: 0;
+      min-width: 600px;
+      max-height: 500px;
+      overflow-y: auto;
+      
+      @media (max-width: 768px) {
+        min-width: 100%;
+        position: static !important;
+        transform: none !important;
+        box-shadow: none;
+        border: none;
+        border-radius: 0;
+      }
+    }
+
+    .dropdownContent {
+      padding: 1.5rem;
+      
+      @media (max-width: 768px) {
+        padding: 1rem;
+      }
+    }
+
+    .servicesSection {
+      .sectionTitle {
+        color: $primary-color;
+        font-weight: 700;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid $primary-color;
+        letter-spacing: 0.5px;
+      }
+
+      .servicesList {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+        
+        @media (max-width: 768px) {
+          grid-template-columns: 1fr;
+        }
+      }
+    }
+
+    .dropdownItem {
+      color: $text-color;
+      padding: 0.75rem 1rem;
+      font-size: 0.9rem;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+      border: none;
+      
+      &:hover {
+        background-color: rgba($primary-color, 0.1);
+        color: $primary-color;
+        transform: translateX(4px);
+      }
+      
+      &:focus {
+        background-color: rgba($primary-color, 0.1);
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+// Smooth scroll behavior for anchor links
+// html {
+//   scroll-behavior: smooth;
+// }
+
+// Custom scrollbar for dropdown
+.navDropdown .dropdown-menu {
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: $light-gray;
+    border-radius: 3px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: $primary-color;
+    border-radius: 3px;
+    
+    &:hover {
+      background: $accent-color;
+    }
+  }
+}
