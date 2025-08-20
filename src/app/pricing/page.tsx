@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { Container, Row, Col, Card, Button, Badge } from 'react-bootstrap';
-import { motion } from 'framer-motion';
+import { Container, Row, Col, Card, Button, Badge } from "react-bootstrap";
+import { motion } from "framer-motion";
 
 const Pricing = () => {
   const pricingPlans = [
@@ -9,7 +9,8 @@ const Pricing = () => {
       name: "Starter",
       price: "R2,500",
       period: "/month",
-      description: "Perfect for new entrepreneurs and small startups getting started",
+      description:
+        "Perfect for new entrepreneurs and small startups getting started",
       isPopular: false,
       features: [
         "Basic company formation (PTY LTD)",
@@ -17,11 +18,11 @@ const Pricing = () => {
         "CIPC compliance setup",
         "Email support",
         "Basic contract templates",
-        "Monthly compliance reminders"
+        "Monthly compliance reminders",
       ],
       buttonText: "Get Started",
       emailSubject: "Inquiry about Starter Plan - Legal Services",
-      gradient: "linear-gradient(135deg, #2196F3 0%, #1976D2 100%)"
+      gradient: "linear-gradient(135deg, #2196F3 0%, #1976D2 100%)",
     },
     {
       name: "Professional",
@@ -37,11 +38,11 @@ const Pricing = () => {
         "Priority phone & email support",
         "Quarterly compliance reviews",
         "Contract review (up to 3/month)",
-        "Basic trademark services"
+        "Basic trademark services",
       ],
       buttonText: "Choose Professional",
       emailSubject: "Inquiry about Professional Plan - Legal Services",
-      gradient: "linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%)"
+      gradient: "linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%)",
     },
     {
       name: "Enterprise",
@@ -58,11 +59,11 @@ const Pricing = () => {
         "Business plan development",
         "Website legal compliance",
         "24/7 priority support",
-        "Quarterly legal audits"
+        "Quarterly legal audits",
       ],
       buttonText: "Go Enterprise",
       emailSubject: "Inquiry about Enterprise Plan - Legal Services",
-      gradient: "linear-gradient(135deg, #9C27B0 0%, #7B1FA2 100%)"
+      gradient: "linear-gradient(135deg, #9C27B0 0%, #7B1FA2 100%)",
     },
     {
       name: "Custom",
@@ -78,45 +79,45 @@ const Pricing = () => {
         "Custom SLA agreements",
         "Dedicated legal team",
         "On-site consultations",
-        "Emergency legal support"
+        "Emergency legal support",
       ],
       buttonText: "Contact Us",
       emailSubject: "Inquiry about Custom Legal Services",
-      gradient: "linear-gradient(135deg, #FF9800 0%, #F57C00 100%)"
-    }
+      gradient: "linear-gradient(135deg, #FF9800 0%, #F57C00 100%)",
+    },
   ];
 
   const additionalServices = [
     {
       name: "One-time Company Formation",
       price: "R3,500",
-      description: "Complete PTY LTD setup with all required documentation"
+      description: "Complete PTY LTD setup with all required documentation",
     },
     {
       name: "Contract Review",
       price: "R750",
-      description: "Professional review of contracts up to 10 pages"
+      description: "Professional review of contracts up to 10 pages",
     },
     {
       name: "Employment Policy Package",
       price: "R2,200",
-      description: "Comprehensive employment policies and procedures"
+      description: "Comprehensive employment policies and procedures",
     },
     {
       name: "Trademark Registration",
       price: "R4,500",
-      description: "Full trademark search and registration service"
+      description: "Full trademark search and registration service",
     },
     {
       name: "Business Plan Development",
       price: "R5,500",
-      description: "Professional business plan with financial projections"
+      description: "Professional business plan with financial projections",
     },
     {
       name: "Legal Compliance Audit",
       price: "R3,800",
-      description: "Comprehensive review of your business compliance status"
-    }
+      description: "Comprehensive review of your business compliance status",
+    },
   ];
 
   const handlePlanSelection = (plan) => {
@@ -178,9 +179,9 @@ Best regards,
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   };
 
   const itemVariants = {
@@ -190,15 +191,15 @@ Best regards,
       opacity: 1,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   return (
     <>
       {/* Hero Section */}
-      <section className="hero-section" style={{ minHeight: '60vh' }}>
+      <section className="hero-section" style={{ minHeight: "60vh" }}>
         <Container className="hero-content">
           <Row className="align-items-center justify-content-center text-center">
             <Col lg={8}>
@@ -211,7 +212,9 @@ Best regards,
                   Transparent <span className="highlight">Pricing</span>
                 </h1>
                 <p className="hero-subtitle">
-                  Choose the perfect plan for your business needs. No hidden fees, no surprises - just clear, honest pricing for quality legal services.
+                  Choose the perfect plan for your business needs. No hidden
+                  fees, no surprises - just clear, honest pricing for quality
+                  legal services.
                 </p>
               </motion.div>
             </Col>
@@ -232,81 +235,110 @@ Best regards,
               {pricingPlans.map((plan, index) => (
                 <Col lg={3} md={6} className="mb-4" key={index}>
                   <motion.div variants={itemVariants}>
-                    <Card className={`service-card text-center position-relative ${plan.isPopular ? 'border-primary' : ''}`} style={{
-                      borderWidth: plan.isPopular ? '3px' : '1px',
-                      borderColor: plan.isPopular ? '#4CAF50' : 'transparent'
-                    }}>
+                    <Card
+                      className={`service-card text-center position-relative ${plan.isPopular ? "border-primary" : ""}`}
+                      style={{
+                        borderWidth: plan.isPopular ? "3px" : "1px",
+                        borderColor: plan.isPopular ? "#4CAF50" : "transparent",
+                      }}
+                    >
                       {plan.isPopular && (
-                        <Badge 
+                        <Badge
                           className="position-absolute top-0 start-50 translate-middle"
                           style={{
-                            background: 'linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%)',
-                            padding: '8px 20px',
-                            fontSize: '0.8rem',
-                            borderRadius: '50px'
+                            background:
+                              "linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%)",
+                            padding: "8px 20px",
+                            fontSize: "0.8rem",
+                            borderRadius: "50px",
                           }}
                         >
                           Most Popular
                         </Badge>
                       )}
-                      
-                      <div style={{
-                        width: '80px',
-                        height: '80px',
-                        background: plan.gradient,
-                        borderRadius: '50%',
-                        margin: '0 auto 1.5rem',
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                        fontSize: '1.5rem',
-                        color: 'white',
-                        fontWeight: 'bold'
-                      }}>
+
+                      <div
+                        style={{
+                          width: "80px",
+                          height: "80px",
+                          background: plan.gradient,
+                          borderRadius: "50%",
+                          margin: "0 auto 1.5rem",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          fontSize: "1.5rem",
+                          color: "white",
+                          fontWeight: "bold",
+                        }}
+                      >
                         {plan.name[0]}
                       </div>
-                      
+
                       <h3>{plan.name}</h3>
                       <div className="mb-3">
-                        <span style={{ fontSize: '2.5rem', fontWeight: 'bold', color: '#4CAF50' }}>
+                        <span
+                          style={{
+                            fontSize: "2.5rem",
+                            fontWeight: "bold",
+                            color: "#4CAF50",
+                          }}
+                        >
                           {plan.price}
                         </span>
-                        <span style={{ color: '#6c757d' }}>{plan.period}</span>
+                        <span style={{ color: "#6c757d" }}>{plan.period}</span>
                       </div>
-                      <p style={{ color: '#6c757d', marginBottom: '2rem' }}>
+                      <p style={{ color: "#6c757d", marginBottom: "2rem" }}>
                         {plan.description}
                       </p>
-                      
-                      <ul style={{ listStyle: 'none', padding: 0, marginBottom: '2rem' }}>
+
+                      <ul
+                        style={{
+                          listStyle: "none",
+                          padding: 0,
+                          marginBottom: "2rem",
+                        }}
+                      >
                         {plan.features.map((feature, fIndex) => (
-                          <li key={fIndex} style={{ 
-                            display: 'flex', 
-                            alignItems: 'center', 
-                            marginBottom: '0.8rem',
-                            fontSize: '0.9rem'
-                          }}>
-                            <svg 
-                              style={{ 
-                                width: '16px', 
-                                height: '16px', 
-                                color: '#4CAF50', 
-                                marginRight: '10px',
-                                flexShrink: 0
-                              }} 
-                              fill="currentColor" 
+                          <li
+                            key={fIndex}
+                            style={{
+                              display: "flex",
+                              alignItems: "center",
+                              marginBottom: "0.8rem",
+                              fontSize: "0.9rem",
+                            }}
+                          >
+                            <svg
+                              style={{
+                                width: "16px",
+                                height: "16px",
+                                color: "#4CAF50",
+                                marginRight: "10px",
+                                flexShrink: 0,
+                              }}
+                              fill="currentColor"
                               viewBox="0 0 20 20"
                             >
-                              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                              <path
+                                fillRule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clipRule="evenodd"
+                              />
                             </svg>
                             {feature}
                           </li>
                         ))}
                       </ul>
-                      
-                      <Button 
-                        className={plan.isPopular ? "btn-primary-custom w-100" : "btn-outline-custom w-100"}
+
+                      <Button
+                        className={
+                          plan.isPopular
+                            ? "btn-primary-custom w-100"
+                            : "btn-outline-custom w-100"
+                        }
                         onClick={() => handlePlanSelection(plan)}
-                        style={{ marginTop: 'auto' }}
+                        style={{ marginTop: "auto" }}
                       >
                         {plan.buttonText}
                       </Button>
@@ -320,7 +352,7 @@ Best regards,
       </section>
 
       {/* Additional Services Section */}
-      <section className="section-padding" style={{ background: '#f8f9fa' }}>
+      <section className="section-padding" style={{ background: "#f8f9fa" }}>
         <Container>
           <motion.div
             initial="hidden"
@@ -331,7 +363,10 @@ Best regards,
             <h2 className="section-title">
               Additional <span className="highlight">Services</span>
             </h2>
-            <p className="text-center mb-5" style={{ color: '#6c757d', fontSize: '1.1rem' }}>
+            <p
+              className="text-center mb-5"
+              style={{ color: "#6c757d", fontSize: "1.1rem" }}
+            >
               Need something specific? Choose from our à la carte services
             </p>
             <Row>
@@ -341,19 +376,21 @@ Best regards,
                     <Card className="service-card">
                       <div className="d-flex justify-content-between align-items-start mb-3">
                         <h4 style={{ flex: 1 }}>{service.name}</h4>
-                        <span style={{ 
-                          fontSize: '1.5rem', 
-                          fontWeight: 'bold', 
-                          color: '#4CAF50',
-                          marginLeft: '10px'
-                        }}>
+                        <span
+                          style={{
+                            fontSize: "1.5rem",
+                            fontWeight: "bold",
+                            color: "#4CAF50",
+                            marginLeft: "10px",
+                          }}
+                        >
                           {service.price}
                         </span>
                       </div>
-                      <p style={{ color: '#6c757d', marginBottom: '1.5rem' }}>
+                      <p style={{ color: "#6c757d", marginBottom: "1.5rem" }}>
                         {service.description}
                       </p>
-                      <Button 
+                      <Button
                         className="btn-outline-custom w-100"
                         onClick={() => handleAdditionalService(service)}
                       >
@@ -385,45 +422,53 @@ Best regards,
                 <motion.div variants={itemVariants}>
                   <Card className="service-card mb-4">
                     <h5>Can I change my plan later?</h5>
-                    <p style={{ color: '#6c757d', marginBottom: 0 }}>
-                      Absolutely! You can upgrade or downgrade your plan at any time. Changes take effect at your next billing cycle, and we'll help you transition smoothly.
+                    <p style={{ color: "#6c757d", marginBottom: 0 }}>
+                      Absolutely! You can upgrade or downgrade your plan at any
+                      time. Changes take effect at your next billing cycle, and
+                      we'll help you transition smoothly.
                     </p>
                   </Card>
                 </motion.div>
-                
+
                 <motion.div variants={itemVariants}>
                   <Card className="service-card mb-4">
                     <h5>Are there any setup fees?</h5>
-                    <p style={{ color: '#6c757d', marginBottom: 0 }}>
-                      No hidden setup fees! The prices shown include everything you need to get started. For company formation, government fees are additional and clearly stated.
+                    <p style={{ color: "#6c757d", marginBottom: 0 }}>
+                      No hidden setup fees! The prices shown include everything
+                      you need to get started. For company formation, government
+                      fees are additional and clearly stated.
                     </p>
                   </Card>
                 </motion.div>
-                
+
                 <motion.div variants={itemVariants}>
                   <Card className="service-card mb-4">
                     <h5>What payment methods do you accept?</h5>
-                    <p style={{ color: '#6c757d', marginBottom: 0 }}>
-                      We accept bank transfers, credit cards, and direct debits. Monthly plans are billed in advance, and we offer annual payment discounts.
+                    <p style={{ color: "#6c757d", marginBottom: 0 }}>
+                      We accept bank transfers, credit cards, and direct debits.
+                      Monthly plans are billed in advance, and we offer annual
+                      payment discounts.
                     </p>
                   </Card>
                 </motion.div>
-                
+
                 <motion.div variants={itemVariants}>
                   <Card className="service-card">
                     <h5>Do you offer refunds?</h5>
-                    <p style={{ color: '#6c757d', marginBottom: 0 }}>
-                      We want you to be satisfied! If you're not happy with our services within the first 30 days, we offer a full refund. After that, we handle cancellations on a case-by-case basis. 
-                      Please contact us to discuss any issues.
+                    <p style={{ color: "#6c757d", marginBottom: 0 }}>
+                      We want you to be satisfied! If you're not happy with our
+                      services within the first 30 days, we offer a full refund.
+                      After that, we handle cancellations on a case-by-case
+                      basis. Please contact us to discuss any issues.
                     </p>
-                    </Card>
+                  </Card>
                 </motion.div>
-                </Col>
+              </Col>
             </Row>
-            </motion.div>
-            </Container>
-        </section>
+          </motion.div>
+        </Container>
+      </section>
     </>
-    );
-}
-export default Pricing;                
+  );
+};
+export default Pricing;

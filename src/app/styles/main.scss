@@ -1,22 +1,38 @@
 // styles/main.scss
-$primary-color: #4CAF50; // light green
+$primary-color: #4caf50; // light green
 $secondary-color: #ffffff;
 $text-color: #333333;
-$accent-color: #2E7D32; // darker green for accents
+$accent-color: #2e7d32; // darker green for accents
 
 // Additional color palette
 $light-gray: #f8f9fa;
 $medium-gray: #6c757d;
 $dark-gray: #343a40;
-$gradient-primary: linear-gradient(135deg, $primary-color 0%, $accent-color 100%);
+$gradient-primary: linear-gradient(
+  135deg,
+  $primary-color 0%,
+  $accent-color 100%
+);
 $gradient-light: linear-gradient(135deg, $secondary-color 0%, $light-gray 100%);
 
 // Typography
-$font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-$font-family-heading: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+$font-family-primary:
+  "Inter",
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  Roboto,
+  sans-serif;
+$font-family-heading:
+  "Poppins",
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  Roboto,
+  sans-serif;
 
 // Import Google Fonts
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap");
 
 // Base styles
 // * {
@@ -32,7 +48,12 @@ $font-family-heading: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 
 //   overflow-x: hidden;
 // }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $font-family-heading;
   font-weight: 600;
   margin-bottom: 1rem;
@@ -47,7 +68,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50px;
   font-weight: 500;
   transition: all 0.3s ease;
-  
+
   &:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba($primary-color, 0.3);
@@ -63,7 +84,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 50px;
   font-weight: 500;
   transition: all 0.3s ease;
-  
+
   &:hover {
     background: $primary-color;
     color: $secondary-color;
@@ -78,7 +99,7 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid rgba($primary-color, 0.1);
   padding: 1rem 0;
   transition: all 0.3s ease;
-  
+
   .navbar-brand {
     font-family: $font-family-heading;
     font-weight: 700;
@@ -88,20 +109,21 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-  
+
   .nav-link {
     color: $text-color;
     font-weight: 500;
     margin: 0 15px;
     position: relative;
     transition: all 0.3s ease;
-    
-    &:hover, &.active {
+
+    &:hover,
+    &.active {
       color: $primary-color;
     }
-    
+
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: -5px;
       left: 0;
@@ -110,8 +132,9 @@ h1, h2, h3, h4, h5, h6 {
       background: $gradient-primary;
       transition: width 0.3s ease;
     }
-    
-    &:hover::after, &.active::after {
+
+    &:hover::after,
+    &.active::after {
       width: 100%;
     }
   }
@@ -123,7 +146,7 @@ h1, h2, h3, h4, h5, h6 {
 //   background: $gradient-light;
 //   position: relative;
 //   overflow: hidden;
-  
+
 //   &::before {
 //     content: '';
 //     position: absolute;
@@ -136,19 +159,19 @@ h1, h2, h3, h4, h5, h6 {
 //     opacity: 0.05;
 //     z-index: 1;
 //   }
-  
+
 //   .hero-content {
 //     position: relative;
 //     z-index: 2;
 //     padding: 100px 0;
 //   }
-  
+
 //   .hero-title {
 //     font-size: 3.5rem;
 //     font-weight: 800;
 //     line-height: 1.2;
 //     margin-bottom: 2rem;
-    
+
 //     .highlight {
 //       background: $gradient-primary;
 //       -webkit-background-clip: text;
@@ -156,7 +179,7 @@ h1, h2, h3, h4, h5, h6 {
 //       background-clip: text;
 //     }
 //   }
-  
+
 //   .hero-subtitle {
 //     font-size: 1.3rem;
 //     color: $medium-gray;
@@ -174,12 +197,12 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease;
   border: none;
   height: 100%;
-  
+
   &:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
   }
-  
+
   .service-icon {
     width: 60px;
     height: 60px;
@@ -189,19 +212,19 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     justify-content: center;
     margin-bottom: 1.5rem;
-    
+
     svg {
       width: 30px;
       height: 30px;
       color: $secondary-color;
     }
   }
-  
+
   h4 {
     color: $text-color;
     margin-bottom: 1rem;
   }
-  
+
   p {
     color: $medium-gray;
     line-height: 1.6;
@@ -218,7 +241,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   text-align: center;
   margin-bottom: 3rem;
-  
+
   .highlight {
     background: $gradient-primary;
     -webkit-background-clip: text;
@@ -232,7 +255,7 @@ h1, h2, h3, h4, h5, h6 {
   background: $dark-gray;
   color: $secondary-color;
   padding: 50px 0 30px;
-  
+
   .footer-brand {
     font-family: $font-family-heading;
     font-weight: 700;
@@ -243,22 +266,22 @@ h1, h2, h3, h4, h5, h6 {
     background-clip: text;
     margin-bottom: 1rem;
   }
-  
+
   .footer-link {
     color: rgba($secondary-color, 0.7);
     text-decoration: none;
     transition: all 0.3s ease;
-    
+
     &:hover {
       color: $primary-color;
     }
   }
-  
+
   .contact-info {
     display: flex;
     align-items: center;
     margin-bottom: 0.5rem;
-    
+
     svg {
       width: 20px;
       height: 20px;
@@ -273,15 +296,15 @@ h1, h2, h3, h4, h5, h6 {
   .hero-title {
     font-size: 2.5rem;
   }
-  
+
   .hero-subtitle {
     font-size: 1.1rem;
   }
-  
+
   .section-title {
     font-size: 2rem;
   }
-  
+
   .navbar-custom .nav-link {
     margin: 5px 0;
   }

@@ -1,15 +1,25 @@
 // styles/main2.scss - Global Variables
-$primary-color: #4CAF50; // light green
+$primary-color: #4caf50; // light green
 $secondary-color: #ffffff;
 $text-color: #333333;
-$accent-color: #2E7D32; // darker green for accents
+$accent-color: #2e7d32; // darker green for accents
 
 // Additional color palette
 $light-gray: #f8f9fa;
 $medium-gray: #6c757d;
 $dark-gray: #343a40;
-$gradient-primary: linear-gradient(135deg, $primary-color 0%, $accent-color 100%);
+$gradient-primary: linear-gradient(
+  135deg,
+  $primary-color 0%,
+  $accent-color 100%
+);
 $gradient-light: linear-gradient(135deg, $secondary-color 0%, $light-gray 100%);
+
+$lime-green: #dbff00;
+$secondary-lime-green: #c2d45b;
+$tertiary-lime-green: #d2e080;
+$dark-blue: #2b485f;
+$secondary-dark-blue: #122029;
 
 // Breakpoints
 $breakpoint-sm: 576px;
@@ -19,7 +29,9 @@ $breakpoint-xl: 1200px;
 $breakpoint-xxl: 1400px;
 
 // Typography
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+$font-family-sans-serif:
+  -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+  "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 $font-size-base: 1rem;
 $line-height-base: 1.5;
 

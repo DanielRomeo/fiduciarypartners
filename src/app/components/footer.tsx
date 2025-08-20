@@ -1,20 +1,20 @@
-'use client';
+"use client";
 
-import { Container } from 'react-bootstrap';
-import Link from 'next/link';
-import { 
-  FaLinkedin, 
-  FaFacebookF, 
-  FaTwitter, 
+import { Container } from "react-bootstrap";
+import Link from "next/link";
+import {
+  FaLinkedin,
+  FaFacebookF,
+  FaTwitter,
   FaInstagram,
   FaEnvelope,
   FaPhone,
   FaMapMarkerAlt,
   FaGavel,
-  FaShieldAlt
-} from 'react-icons/fa';
+  FaShieldAlt,
+} from "react-icons/fa";
 
-import styles from '../styles/footer.module.scss';
+import styles from "../styles/footer.module.scss";
 
 const Footer = () => {
   return (
@@ -28,10 +28,11 @@ const Footer = () => {
               Fiduciary Partners
             </div>
             <p className="mb-3">
-              Providing trusted legal counsel and fiduciary services to businesses across South Africa. 
-              Excellence in corporate law, compliance, and business development since 2010.
+              Providing trusted legal counsel and fiduciary services to
+              businesses across South Africa. Excellence in corporate law,
+              compliance, and business development since 2010.
             </p>
-            
+
             <div className={styles.contactInfo}>
               <FaEnvelope />
               <span>info@fiduciarypartners.co.za</span>
@@ -66,12 +67,36 @@ const Footer = () => {
           <div className="col-lg-2 mb-4">
             <h5 className={styles.footerHeading}>Legal Services</h5>
             <ul className="list-unstyled">
-              <li><a href="#" className={styles.footerLink}>Corporate Law</a></li>
-              <li><a href="#" className={styles.footerLink}>Company Formation</a></li>
-              <li><a href="#" className={styles.footerLink}>Contract Drafting</a></li>
-              <li><a href="#" className={styles.footerLink}>Mergers & Acquisitions</a></li>
-              <li><a href="#" className={styles.footerLink}>Employment Law</a></li>
-              <li><a href="#" className={styles.footerLink}>Intellectual Property</a></li>
+              <li>
+                <a href="#" className={styles.footerLink}>
+                  Corporate Law
+                </a>
+              </li>
+              <li>
+                <a href="#" className={styles.footerLink}>
+                  Company Formation
+                </a>
+              </li>
+              <li>
+                <a href="#" className={styles.footerLink}>
+                  Contract Drafting
+                </a>
+              </li>
+              <li>
+                <a href="#" className={styles.footerLink}>
+                  Mergers & Acquisitions
+                </a>
+              </li>
+              <li>
+                <a href="#" className={styles.footerLink}>
+                  Employment Law
+                </a>
+              </li>
+              <li>
+                <a href="#" className={styles.footerLink}>
+                  Intellectual Property
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -79,12 +104,36 @@ const Footer = () => {
           <div className="col-lg-2 mb-4">
             <h5 className={styles.footerHeading}>Fiduciary Services</h5>
             <ul className="list-unstyled">
-              <li><a href="#" className={styles.footerLink}>Trust Administration</a></li>
-              <li><a href="#" className={styles.footerLink}>Estate Planning</a></li>
-              <li><a href="#" className={styles.footerLink}>Regulatory Compliance</a></li>
-              <li><a href="#" className={styles.footerLink}>Risk Management</a></li>
-              <li><a href="#" className={styles.footerLink}>Due Diligence</a></li>
-              <li><a href="#" className={styles.footerLink}>Corporate Governance</a></li>
+              <li>
+                <a href="#" className={styles.footerLink}>
+                  Trust Administration
+                </a>
+              </li>
+              <li>
+                <a href="#" className={styles.footerLink}>
+                  Estate Planning
+                </a>
+              </li>
+              <li>
+                <a href="#" className={styles.footerLink}>
+                  Regulatory Compliance
+                </a>
+              </li>
+              <li>
+                <a href="#" className={styles.footerLink}>
+                  Risk Management
+                </a>
+              </li>
+              <li>
+                <a href="#" className={styles.footerLink}>
+                  Due Diligence
+                </a>
+              </li>
+              <li>
+                <a href="#" className={styles.footerLink}>
+                  Corporate Governance
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -92,12 +141,36 @@ const Footer = () => {
           <div className="col-lg-2 mb-4">
             <h5 className={styles.footerHeading}>Quick Links</h5>
             <ul className="list-unstyled">
-              <li><Link href="/" className={styles.footerLink}>Home</Link></li>
-              <li><Link href="/about" className={styles.footerLink}>About Us</Link></li>
-              <li><Link href="/services" className={styles.footerLink}>Our Services</Link></li>
-              <li><Link href="/team" className={styles.footerLink}>Our Team</Link></li>
-              <li><Link href="/contact" className={styles.footerLink}>Contact Us</Link></li>
-              <li><Link href="/careers" className={styles.footerLink}>Careers</Link></li>
+              <li>
+                <Link href="/" className={styles.footerLink}>
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link href="/about" className={styles.footerLink}>
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className={styles.footerLink}>
+                  Our Services
+                </Link>
+              </li>
+              <li>
+                <Link href="/team" className={styles.footerLink}>
+                  Our Team
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className={styles.footerLink}>
+                  Contact Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/careers" className={styles.footerLink}>
+                  Careers
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -105,11 +178,31 @@ const Footer = () => {
           <div className="col-lg-2 mb-4">
             <h5 className={styles.footerHeading}>Legal</h5>
             <ul className="list-unstyled">
-              <li><Link href="/privacy" className={styles.footerLink}>Privacy Policy</Link></li>
-              <li><Link href="/terms" className={styles.footerLink}>Terms of Service</Link></li>
-              <li><Link href="/cookies" className={styles.footerLink}>Cookie Policy</Link></li>
-              <li><Link href="/disclaimer" className={styles.footerLink}>Disclaimer</Link></li>
-              <li><Link href="/complaints" className={styles.footerLink}>Complaints Procedure</Link></li>
+              <li>
+                <Link href="/privacy" className={styles.footerLink}>
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms" className={styles.footerLink}>
+                  Terms of Service
+                </Link>
+              </li>
+              <li>
+                <Link href="/cookies" className={styles.footerLink}>
+                  Cookie Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/disclaimer" className={styles.footerLink}>
+                  Disclaimer
+                </Link>
+              </li>
+              <li>
+                <Link href="/complaints" className={styles.footerLink}>
+                  Complaints Procedure
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -121,10 +214,12 @@ const Footer = () => {
               <FaShieldAlt className={styles.regulatoryIcon} />
               <div>
                 <p className="mb-1">
-                  <strong>Fiduciary Partners (Pty) Ltd</strong> - Registration No: 2010/123456/07
+                  <strong>Fiduciary Partners (Pty) Ltd</strong> - Registration
+                  No: 2010/123456/07
                 </p>
                 <p className="mb-0">
-                  Authorised Financial Services Provider (FSP 12345) | Regulated by the Financial Sector Conduct Authority (FSCA)
+                  Authorised Financial Services Provider (FSP 12345) | Regulated
+                  by the Financial Sector Conduct Authority (FSCA)
                 </p>
               </div>
             </div>
@@ -132,10 +227,12 @@ const Footer = () => {
         </div>
 
         <hr className={styles.footerDivider} />
-        
+
         <div className="row">
           <div className="col-md-6">
-            <p className="mb-0">&copy; 2025 Fiduciary Partners (Pty) Ltd. All rights reserved.</p>
+            <p className="mb-0">
+              &copy; 2025 Fiduciary Partners (Pty) Ltd. All rights reserved.
+            </p>
           </div>
           <div className="col-md-6 text-md-end">
             <p className="mb-0">

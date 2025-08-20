@@ -1,18 +1,18 @@
-'use client';
+"use client";
 
-import { Container, Row, Col, Card, Form, Button } from 'react-bootstrap';
-import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { Container, Row, Col, Card, Form, Button } from "react-bootstrap";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    subject: '',
-    message: '',
-    serviceType: ''
+    name: "",
+    email: "",
+    company: "",
+    phone: "",
+    subject: "",
+    message: "",
+    serviceType: "",
   });
 
   const contactInfo = [
@@ -22,13 +22,17 @@ const Contact = () => {
         "45 Thabo Mbeki Street",
         "Lebowakgomo Unit 2",
         "Lebowakgomo, 0737",
-        "Limpopo, South Africa"
+        "Limpopo, South Africa",
       ],
       icon: (
         <svg fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+          <path
+            fillRule="evenodd"
+            d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+            clipRule="evenodd"
+          />
         </svg>
-      )
+      ),
     },
     {
       title: "Phone Number",
@@ -36,13 +40,13 @@ const Contact = () => {
         "+27 15 633 2847",
         "+27 82 456 7890",
         "Business Hours:",
-        "Mon-Fri: 8:00 AM - 5:00 PM"
+        "Mon-Fri: 8:00 AM - 5:00 PM",
       ],
       icon: (
         <svg fill="currentColor" viewBox="0 0 20 20">
           <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
         </svg>
-      )
+      ),
     },
     {
       title: "Email Address",
@@ -50,14 +54,14 @@ const Contact = () => {
         "info@fiduciarypartners.co.za",
         "legal@fiduciarypartners.co.za",
         "support@fiduciarypartners.co.za",
-        "Response within 24 hours"
+        "Response within 24 hours",
       ],
       icon: (
         <svg fill="currentColor" viewBox="0 0 20 20">
           <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
           <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
         </svg>
-      )
+      ),
     },
     {
       title: "Business Hours",
@@ -65,14 +69,18 @@ const Contact = () => {
         "Monday - Friday:",
         "8:00 AM - 5:00 PM",
         "Saturday: 9:00 AM - 1:00 PM",
-        "Sunday: Closed"
+        "Sunday: Closed",
       ],
       icon: (
         <svg fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
+          <path
+            fillRule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+            clipRule="evenodd"
+          />
         </svg>
-      )
-    }
+      ),
+    },
   ];
 
   const serviceTypes = [
@@ -84,26 +92,26 @@ const Contact = () => {
     "Employment Law",
     "Trademark Services",
     "General Inquiry",
-    "Other"
+    "Other",
   ];
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     const emailBody = `New Contact Form Submission
 
 Name: ${formData.name}
 Email: ${formData.email}
-Company: ${formData.company || 'Not provided'}
-Phone: ${formData.phone || 'Not provided'}
+Company: ${formData.company || "Not provided"}
+Phone: ${formData.phone || "Not provided"}
 Service Type: ${formData.serviceType}
 Subject: ${formData.subject}
 
@@ -122,9 +130,9 @@ This message was sent from the Fiduciary Partners contact form.`;
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   };
 
   const itemVariants = {
@@ -134,34 +142,39 @@ This message was sent from the Fiduciary Partners contact form.`;
       opacity: 1,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
-      }
-    }
+        ease: "easeOut",
+      },
+    },
   };
 
   return (
     <>
       {/* Hero Section */}
-      <section style={{ 
-        minHeight: '60vh',
-        backgroundImage: 'url(https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80)',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        position: 'relative',
-        display: 'flex',
-        alignItems: 'center'
-      }}>
-        <div style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          backgroundColor: 'rgba(76, 175, 80, 0.8)',
-          zIndex: 1
-        }}></div>
-        <Container style={{ position: 'relative', zIndex: 2 }}>
+      <section
+        style={{
+          minHeight: "60vh",
+          backgroundImage:
+            "url(https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          position: "relative",
+          display: "flex",
+          alignItems: "center",
+        }}
+      >
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: "rgba(76, 175, 80, 0.8)",
+            zIndex: 1,
+          }}
+        ></div>
+        <Container style={{ position: "relative", zIndex: 2 }}>
           <Row className="align-items-center justify-content-center text-center">
             <Col lg={8}>
               <motion.div
@@ -169,22 +182,28 @@ This message was sent from the Fiduciary Partners contact form.`;
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <h1 style={{
-                  fontSize: '3.5rem',
-                  fontWeight: '800',
-                  color: 'white',
-                  marginBottom: '2rem',
-                  textShadow: '2px 2px 4px rgba(0,0,0,0.3)'
-                }}>
+                <h1
+                  style={{
+                    fontSize: "3.5rem",
+                    fontWeight: "800",
+                    color: "white",
+                    marginBottom: "2rem",
+                    textShadow: "2px 2px 4px rgba(0,0,0,0.3)",
+                  }}
+                >
                   Get In Touch
                 </h1>
-                <p style={{
-                  fontSize: '1.3rem',
-                  color: 'white',
-                  marginBottom: '3rem',
-                  textShadow: '1px 1px 2px rgba(0,0,0,0.3)'
-                }}>
-                  Ready to discuss your legal needs? We're here to help you build a compliant and successful business. Contact us today for a consultation.
+                <p
+                  style={{
+                    fontSize: "1.3rem",
+                    color: "white",
+                    marginBottom: "3rem",
+                    textShadow: "1px 1px 2px rgba(0,0,0,0.3)",
+                  }}
+                >
+                  Ready to discuss your legal needs? We're here to help you
+                  build a compliant and successful business. Contact us today
+                  for a consultation.
                 </p>
               </motion.div>
             </Col>
@@ -209,16 +228,25 @@ This message was sent from the Fiduciary Partners contact form.`;
                 <Col lg={3} md={6} className="mb-4" key={index}>
                   <motion.div variants={itemVariants}>
                     <Card className="service-card text-center">
-                      <div className="service-icon">
-                        {info.icon}
-                      </div>
+                      <div className="service-icon">{info.icon}</div>
                       <h4>{info.title}</h4>
                       {info.details.map((detail, dIndex) => (
-                        <p key={dIndex} style={{ 
-                          marginBottom: '0.3rem',
-                          color: dIndex === info.details.length - 1 && info.title !== "Office Address" ? '#4CAF50' : '#6c757d',
-                          fontWeight: dIndex === info.details.length - 1 && info.title !== "Office Address" ? '500' : 'normal'
-                        }}>
+                        <p
+                          key={dIndex}
+                          style={{
+                            marginBottom: "0.3rem",
+                            color:
+                              dIndex === info.details.length - 1 &&
+                              info.title !== "Office Address"
+                                ? "#4CAF50"
+                                : "#6c757d",
+                            fontWeight:
+                              dIndex === info.details.length - 1 &&
+                              info.title !== "Office Address"
+                                ? "500"
+                                : "normal",
+                          }}
+                        >
                           {detail}
                         </p>
                       ))}
@@ -232,7 +260,7 @@ This message was sent from the Fiduciary Partners contact form.`;
       </section>
 
       {/* Contact Form and Map Section */}
-      <section className="section-padding" style={{ background: '#f8f9fa' }}>
+      <section className="section-padding" style={{ background: "#f8f9fa" }}>
         <Container>
           <Row>
             {/* Contact Form */}
@@ -256,7 +284,7 @@ This message was sent from the Fiduciary Partners contact form.`;
                             value={formData.name}
                             onChange={handleInputChange}
                             required
-                            style={{ borderRadius: '10px', padding: '12px' }}
+                            style={{ borderRadius: "10px", padding: "12px" }}
                           />
                         </Form.Group>
                       </Col>
@@ -269,12 +297,12 @@ This message was sent from the Fiduciary Partners contact form.`;
                             value={formData.email}
                             onChange={handleInputChange}
                             required
-                            style={{ borderRadius: '10px', padding: '12px' }}
+                            style={{ borderRadius: "10px", padding: "12px" }}
                           />
                         </Form.Group>
                       </Col>
                     </Row>
-                    
+
                     <Row>
                       <Col md={6}>
                         <Form.Group className="mb-3">
@@ -284,7 +312,7 @@ This message was sent from the Fiduciary Partners contact form.`;
                             name="company"
                             value={formData.company}
                             onChange={handleInputChange}
-                            style={{ borderRadius: '10px', padding: '12px' }}
+                            style={{ borderRadius: "10px", padding: "12px" }}
                           />
                         </Form.Group>
                       </Col>
@@ -296,7 +324,7 @@ This message was sent from the Fiduciary Partners contact form.`;
                             name="phone"
                             value={formData.phone}
                             onChange={handleInputChange}
-                            style={{ borderRadius: '10px', padding: '12px' }}
+                            style={{ borderRadius: "10px", padding: "12px" }}
                           />
                         </Form.Group>
                       </Col>
@@ -308,11 +336,13 @@ This message was sent from the Fiduciary Partners contact form.`;
                         name="serviceType"
                         value={formData.serviceType}
                         onChange={handleInputChange}
-                        style={{ borderRadius: '10px', padding: '12px' }}
+                        style={{ borderRadius: "10px", padding: "12px" }}
                       >
                         <option value="">Select a service...</option>
                         {serviceTypes.map((service, index) => (
-                          <option key={index} value={service}>{service}</option>
+                          <option key={index} value={service}>
+                            {service}
+                          </option>
                         ))}
                       </Form.Select>
                     </Form.Group>
@@ -325,7 +355,7 @@ This message was sent from the Fiduciary Partners contact form.`;
                         value={formData.subject}
                         onChange={handleInputChange}
                         required
-                        style={{ borderRadius: '10px', padding: '12px' }}
+                        style={{ borderRadius: "10px", padding: "12px" }}
                       />
                     </Form.Group>
 
@@ -338,7 +368,7 @@ This message was sent from the Fiduciary Partners contact form.`;
                         value={formData.message}
                         onChange={handleInputChange}
                         required
-                        style={{ borderRadius: '10px', padding: '12px' }}
+                        style={{ borderRadius: "10px", padding: "12px" }}
                         placeholder="Please describe your legal needs or questions..."
                       />
                     </Form.Group>
@@ -361,7 +391,13 @@ This message was sent from the Fiduciary Partners contact form.`;
               >
                 <Card className="service-card h-100">
                   <h3 className="mb-4">Find Us Here</h3>
-                  <div style={{ height: '450px', borderRadius: '15px', overflow: 'hidden' }}>
+                  <div
+                    style={{
+                      height: "450px",
+                      borderRadius: "15px",
+                      overflow: "hidden",
+                    }}
+                  >
                     <iframe
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.123456789!2d29.4833!3d-24.2167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec1234567890abc%3A0x1234567890abcdef!2s45%20Thabo%20Mbeki%20St%2C%20Lebowakgomo%20Unit%202%2C%20Lebowakgomo%2C%200737!5e0!3m2!1sen!2sza!4v1234567890123!5m2!1sen!2sza"
                       width="100%"
@@ -374,10 +410,10 @@ This message was sent from the Fiduciary Partners contact form.`;
                     ></iframe>
                   </div>
                   <div className="mt-3">
-                    <p style={{ color: '#6c757d', marginBottom: '0.5rem' }}>
+                    <p style={{ color: "#6c757d", marginBottom: "0.5rem" }}>
                       <strong>Office Address:</strong>
                     </p>
-                    <p style={{ color: '#6c757d' }}>
+                    <p style={{ color: "#6c757d" }}>
                       45 Thabo Mbeki Street, Lebowakgomo Unit 2<br />
                       Lebowakgomo, 0737, Limpopo, South Africa
                     </p>
@@ -406,35 +442,43 @@ This message was sent from the Fiduciary Partners contact form.`;
                 <motion.div variants={itemVariants}>
                   <Card className="service-card mb-4">
                     <h5>How quickly can you respond to my inquiry?</h5>
-                    <p style={{ color: '#6c757d', marginBottom: 0 }}>
-                      We typically respond to all inquiries within 24 hours during business days. For urgent legal matters, please call our office directly.
+                    <p style={{ color: "#6c757d", marginBottom: 0 }}>
+                      We typically respond to all inquiries within 24 hours
+                      during business days. For urgent legal matters, please
+                      call our office directly.
                     </p>
                   </Card>
                 </motion.div>
-                
+
                 <motion.div variants={itemVariants}>
                   <Card className="service-card mb-4">
                     <h5>Do you offer free consultations?</h5>
-                    <p style={{ color: '#6c757d', marginBottom: 0 }}>
-                      Yes! We offer a complimentary 30-minute consultation to discuss your needs and how we can help your business succeed.
+                    <p style={{ color: "#6c757d", marginBottom: 0 }}>
+                      Yes! We offer a complimentary 30-minute consultation to
+                      discuss your needs and how we can help your business
+                      succeed.
                     </p>
                   </Card>
                 </motion.div>
-                
+
                 <motion.div variants={itemVariants}>
                   <Card className="service-card mb-4">
                     <h5>Can you help businesses outside of Limpopo?</h5>
-                    <p style={{ color: '#6c757d', marginBottom: 0 }}>
-                      Absolutely! While our office is in Lebowakgomo, we serve clients throughout South Africa and can handle most services remotely.
+                    <p style={{ color: "#6c757d", marginBottom: 0 }}>
+                      Absolutely! While our office is in Lebowakgomo, we serve
+                      clients throughout South Africa and can handle most
+                      services remotely.
                     </p>
                   </Card>
                 </motion.div>
-                
+
                 <motion.div variants={itemVariants}>
                   <Card className="service-card">
                     <h5>What should I bring to our first meeting?</h5>
-                    <p style={{ color: '#6c757d', marginBottom: 0 }}>
-                      Bring any existing business documents, identification, and a clear outline of your goals. We'll guide you through what else might be needed.
+                    <p style={{ color: "#6c757d", marginBottom: 0 }}>
+                      Bring any existing business documents, identification, and
+                      a clear outline of your goals. We'll guide you through
+                      what else might be needed.
                     </p>
                   </Card>
                 </motion.div>
@@ -445,7 +489,7 @@ This message was sent from the Fiduciary Partners contact form.`;
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding" style={{ background: '#f8f9fa' }}>
+      <section className="section-padding" style={{ background: "#f8f9fa" }}>
         <Container>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -458,18 +502,22 @@ This message was sent from the Fiduciary Partners contact form.`;
               Ready to <span className="highlight">Get Started?</span>
             </h2>
             <p className="lead mb-4">
-              Don't let legal complexities hold your business back. Contact us today and let's build your success together.
+              Don't let legal complexities hold your business back. Contact us
+              today and let's build your success together.
             </p>
             <div className="d-flex flex-wrap gap-3 justify-content-center">
-              <Button 
+              <Button
                 className="btn-primary-custom"
-                onClick={() => window.location.href = 'tel:+27156332847'}
+                onClick={() => (window.location.href = "tel:+27156332847")}
               >
                 Call Now
               </Button>
-              <Button 
+              <Button
                 className="btn-outline-custom"
-                onClick={() => window.location.href = 'mailto:info@fiduciarypartners.co.za?subject=Free Consultation Request'}
+                onClick={() =>
+                  (window.location.href =
+                    "mailto:info@fiduciarypartners.co.za?subject=Free Consultation Request")
+                }
               >
                 Schedule Consultation
               </Button>

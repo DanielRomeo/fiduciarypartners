@@ -1,9 +1,11 @@
+@import "./main2.scss";
+
 .home {
   .heroSlide {
     position: relative;
 
     img {
-      height: 70vh;
+      height: 90vh;
       object-fit: cover;
       filter: brightness(60%);
     }
@@ -28,7 +30,7 @@
       font-weight: bold;
 
       .highlight {
-        color: #f39c12; // golden law-style highlight
+        color: $secondary-lime-green;
       }
     }
 
@@ -38,6 +40,7 @@
       line-height: 1.6;
     }
 
+    // main action button:
     button {
       font-weight: 600;
       border-radius: 30px;
@@ -45,7 +48,7 @@
       transition: all 0.3s ease;
 
       &:hover {
-        background: #f39c12;
+        background: $dark-blue;
         color: #fff;
       }
     }
@@ -54,32 +57,35 @@
 
 /* Hero Content */
 .heroContent {
+  // height: 100vh;
+  background-color: black;
+  width: 100%;
   position: relative;
   z-index: 2;
   // padding-top: 100px;
   color: white;
-}
 
-.heroTitle {
-  font-size: 3.5rem;
-  font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 2rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
+  .heroTitle {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
 
-.heroSubtitle {
-  font-size: 1.3rem;
-  margin-bottom: 3rem;
-  line-height: 1.6;
-  color: rgba(255, 255, 255, 0.95);
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-}
+  .heroSubtitle {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  }
 
-.heroButtons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  .heroButtons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
 }
 
 /* Buttons */
@@ -133,7 +139,11 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(to top, rgba(76, 175, 80, 0.9) 0%, transparent 100%);
+  background: linear-gradient(
+    to top,
+    rgba(76, 175, 80, 0.9) 0%,
+    transparent 100%
+  );
   padding: 30px;
   color: white;
 
@@ -153,52 +163,94 @@
 }
 
 /* Shared Section Styling */
-.sectionPadding {
+.servicesSection {
   padding: 80px 0;
-}
 
-.sectionTitle {
-  text-align: center;
-  font-size: 2.2rem;
-  font-weight: 700;
-  margin-bottom: 2.5rem;
+  .sectionTitle {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
 
-  .highlight {
-    color: #f39c12;
+    .highlight {
+      color: $lime-green;
+    }
+  }
+
+  .bgLight {
+    background: #f8f9fa;
+  }
+
+  /* Service Cards */
+  .serviceCard {
+    max-width: 280px;
+    text-align: center;
+    padding: 2rem 1rem;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-8px);
+    }
+
+    h4 {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+  }
+
+  .serviceIcon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: $dark-blue;
   }
 }
 
-.bgLight {
-  background: #f8f9fa;
-}
-
-/* Service Cards */
-.serviceCard {
+.getStartedSection {
+  background: $tertiary-lime-green;
+  padding: 80px 0;
   text-align: center;
-  padding: 2rem 1rem;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
 
-  &:hover {
-    transform: translateY(-8px);
-  }
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: $text-color;
 
-  h4 {
-    margin-top: 1rem;
-    font-size: 1.2rem;
-    font-weight: 600;
+    .highlight {
+      color: $primary-color;
+    }
   }
 
   p {
-    font-size: 0.95rem;
-    color: #555;
+    font-size: 1.2rem;
+    // color: $medium-gray;
+    color: $dark-blue;
+    margin-bottom: 2rem;
   }
-}
 
-.serviceIcon {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #4caf50;
+  button {
+    // @extend .btnPrimary;
+      background: linear-gradient(135deg, $dark-blue 0%, $secondary-dark-blue 100%);
+    color: white;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    &:hover {
+            background: linear-gradient(135deg, $dark-blue 0%, $secondary-dark-blue 100%);
+
+      // background: $secondary-dark-blue;
+      // background-color: transparent;
+      color: $secondary-lime-green;
+      // border: 1px solid $secondary-lime-green;
+      font-size: 1.4rem;
+    }
+  }
 }
