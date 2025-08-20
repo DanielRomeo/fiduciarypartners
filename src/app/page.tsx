@@ -1,12 +1,13 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 "use client";
 
 import { Container, Row, Col, Button, Card, Carousel } from "react-bootstrap";
 import { motion } from "framer-motion";
 import styles from "./styles/home.module.scss";
-import Navbar from "./components/navbar";
 
 const Home = () => {
-  const services = [
+  const services: any = [
     {
       title: "Custom Business Formation & Structure",
       description:
@@ -58,7 +59,7 @@ const Home = () => {
     },
   ];
 
-  const containerVariants = {
+  const containerVariants: any = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -68,7 +69,7 @@ const Home = () => {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: any = {
     hidden: { y: 50, opacity: 0 },
     visible: {
       y: 0,
@@ -245,7 +246,7 @@ const Home = () => {
               Our <span className={styles.highlight}>Services</span>
             </h2>
             <Row>
-              {services.map((service, index) => (
+              {services.map((service: any, index: number) => (
                 <Col lg={3} md={6} className="mb-4" key={index}>
                   <motion.div variants={itemVariants}>
                     <Card className={styles.serviceCard}>
@@ -260,7 +261,7 @@ const Home = () => {
           </motion.div>
         </Container>
       </section>
-              
+
       {/* Why Choose Us Section */}
       {/* <section className={`${styles.sectionPadding} ${styles.bgLight}`}>
         <Container>

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // app/layout.js
 import "bootstrap/dist/css/bootstrap.min.css";
 

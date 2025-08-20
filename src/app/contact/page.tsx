@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import { Container, Row, Col, Card, Form, Button } from "react-bootstrap";
@@ -15,7 +16,7 @@ const Contact = () => {
     serviceType: "",
   });
 
-  const contactInfo = [
+  const contactInfo: any = [
     {
       title: "Office Address",
       details: [
@@ -83,7 +84,7 @@ const Contact = () => {
     },
   ];
 
-  const serviceTypes = [
+  const serviceTypes: any = [
     "Company Formation",
     "Legal Documentation",
     "Compliance Support",
@@ -95,7 +96,7 @@ const Contact = () => {
     "Other",
   ];
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: any) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -103,7 +104,7 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault();
 
     const emailBody = `New Contact Form Submission
@@ -125,7 +126,7 @@ This message was sent from the Fiduciary Partners contact form.`;
     window.location.href = mailtoLink;
   };
 
-  const containerVariants = {
+  const containerVariants: any = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -135,7 +136,7 @@ This message was sent from the Fiduciary Partners contact form.`;
     },
   };
 
-  const itemVariants = {
+  const itemVariants: any = {
     hidden: { y: 50, opacity: 0 },
     visible: {
       y: 0,
@@ -201,9 +202,9 @@ This message was sent from the Fiduciary Partners contact form.`;
                     textShadow: "1px 1px 2px rgba(0,0,0,0.3)",
                   }}
                 >
-                  Ready to discuss your legal needs? We're here to help you
-                  build a compliant and successful business. Contact us today
-                  for a consultation.
+                  Ready to discuss your legal needs? Were here to help you build
+                  a compliant and successful business. Contact us today for a
+                  consultation.
                 </p>
               </motion.div>
             </Col>
@@ -224,13 +225,13 @@ This message was sent from the Fiduciary Partners contact form.`;
               Contact <span className="highlight">Information</span>
             </h2>
             <Row>
-              {contactInfo.map((info, index) => (
+              {contactInfo.map((info: any, index: any) => (
                 <Col lg={3} md={6} className="mb-4" key={index}>
                   <motion.div variants={itemVariants}>
                     <Card className="service-card text-center">
                       <div className="service-icon">{info.icon}</div>
                       <h4>{info.title}</h4>
-                      {info.details.map((detail, dIndex) => (
+                      {info.details.map((detail: any, dIndex: any) => (
                         <p
                           key={dIndex}
                           style={{
@@ -339,7 +340,7 @@ This message was sent from the Fiduciary Partners contact form.`;
                         style={{ borderRadius: "10px", padding: "12px" }}
                       >
                         <option value="">Select a service...</option>
-                        {serviceTypes.map((service, index) => (
+                        {serviceTypes.map((service: any, index: any) => (
                           <option key={index} value={service}>
                             {service}
                           </option>
@@ -454,7 +455,7 @@ This message was sent from the Fiduciary Partners contact form.`;
                   <Card className="service-card mb-4">
                     <h5>Do you offer free consultations?</h5>
                     <p style={{ color: "#6c757d", marginBottom: 0 }}>
-                      Yes! We offer a complimentary 30-minute consultation to
+                      Yes! We offer a complimentary 30 minute consultation to
                       discuss your needs and how we can help your business
                       succeed.
                     </p>
@@ -477,8 +478,8 @@ This message was sent from the Fiduciary Partners contact form.`;
                     <h5>What should I bring to our first meeting?</h5>
                     <p style={{ color: "#6c757d", marginBottom: 0 }}>
                       Bring any existing business documents, identification, and
-                      a clear outline of your goals. We'll guide you through
-                      what else might be needed.
+                      a clear outline of your goals. Well guide you through what
+                      else might be needed.
                     </p>
                   </Card>
                 </motion.div>
@@ -502,8 +503,8 @@ This message was sent from the Fiduciary Partners contact form.`;
               Ready to <span className="highlight">Get Started?</span>
             </h2>
             <p className="lead mb-4">
-              Don't let legal complexities hold your business back. Contact us
-              today and let's build your success together.
+              Dont let legal complexities hold your business back. Contact us
+              today and lets build your success together.
             </p>
             <div className="d-flex flex-wrap gap-3 justify-content-center">
               <Button

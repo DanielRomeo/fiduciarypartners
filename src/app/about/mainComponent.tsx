@@ -62,7 +62,6 @@ const About = () => {
   };
 
   return (
-    // <Layout>
     <div>
       {/* <Head>
         <title>About Us - Fiduciary Partners</title>
@@ -83,8 +82,8 @@ const About = () => {
                   About <span className="highlight">Fiduciary Partners</span>
                 </h1>
                 <p className="hero-subtitle">
-                  We're innovators, collaborators, and problem-solvers. More
-                  than a company — we're liberators, democratizing legal access
+                  Were innovators, collaborators, and problem-solvers. More
+                  than a company — were liberators, democratizing legal access
                   for every entrepreneur.
                 </p>
               </motion.div>
@@ -115,7 +114,7 @@ const About = () => {
                 <p>
                   Under the leadership of CEO Cecil Maboko, we recognized that
                   entrepreneurs and small businesses needed professional legal
-                  support but couldn't afford premium law firm rates. This
+                  support but couldnt afford premium law firm rates. This
                   insight drove us to create structured, affordable, and
                   accessible legal support solutions.
                 </p>
@@ -149,6 +148,10 @@ const About = () => {
               </motion.div>
             </Col>
           </Row>
+
+
+
+
           <Row className="mt-5">
             <Col>
               <motion.div
@@ -219,7 +222,7 @@ const About = () => {
                   If you share our passion for empowering entrepreneurs and
                   believe in the power of accessible legal support, we invite
                   you to join us on this journey. Together, we can create a
-                  brighter future for South Africa's business landscape.
+                  brighter future for South Africas business landscape.
                 </p>
               </motion.div>
             </Col>

@@ -147,7 +147,7 @@ Best regards,
     window.location.href = mailtoLink;
   };
 
-  const handleAdditionalService = (service) => {
+  const handleAdditionalService = (service: any) => {
     const emailBody = `Hello Fiduciary Partners,
 
 I am interested in your ${service.name} service priced at ${service.price}.
@@ -213,7 +213,7 @@ Best regards,
                 </h1>
                 <p className="hero-subtitle">
                   Choose the perfect plan for your business needs. No hidden
-                  fees, no surprises - just clear, honest pricing for quality
+                  fees, no surprises just clear, honest pricing for quality
                   legal services.
                 </p>
               </motion.div>
@@ -367,7 +367,7 @@ Best regards,
               className="text-center mb-5"
               style={{ color: "#6c757d", fontSize: "1.1rem" }}
             >
-              Need something specific? Choose from our à la carte services
+              Need something specific? Choose from our s la carte services
             </p>
             <Row>
               {additionalServices.map((service, index) => (
@@ -425,7 +425,7 @@ Best regards,
                     <p style={{ color: "#6c757d", marginBottom: 0 }}>
                       Absolutely! You can upgrade or downgrade your plan at any
                       time. Changes take effect at your next billing cycle, and
-                      we'll help you transition smoothly.
+                      well help you transition smoothly.
                     </p>
                   </Card>
                 </motion.div>
@@ -456,7 +456,7 @@ Best regards,
                   <Card className="service-card">
                     <h5>Do you offer refunds?</h5>
                     <p style={{ color: "#6c757d", marginBottom: 0 }}>
-                      We want you to be satisfied! If you're not happy with our
+                      We want you to be satisfied! If youre not happy with our
                       services within the first 30 days, we offer a full refund.
                       After that, we handle cancellations on a case-by-case
                       basis. Please contact us to discuss any issues.

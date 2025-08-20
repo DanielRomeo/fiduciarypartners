@@ -232,24 +232,26 @@
 
   p {
     font-size: 1.2rem;
-    // color: $medium-gray;
     color: $dark-blue;
     margin-bottom: 2rem;
   }
 
   button {
-    // @extend .btnPrimary;
-      background: linear-gradient(135deg, $dark-blue 0%, $secondary-dark-blue 100%);
+    background: linear-gradient(
+      135deg,
+      $dark-blue 0%,
+      $secondary-dark-blue 100%
+    );
     color: white;
     padding: 12px 24px;
     font-size: 1.1rem;
     &:hover {
-            background: linear-gradient(135deg, $dark-blue 0%, $secondary-dark-blue 100%);
-
-      // background: $secondary-dark-blue;
-      // background-color: transparent;
+      background: linear-gradient(
+        135deg,
+        $dark-blue 0%,
+        $secondary-dark-blue 100%
+      );
       color: $secondary-lime-green;
-      // border: 1px solid $secondary-lime-green;
       font-size: 1.4rem;
     }
   }

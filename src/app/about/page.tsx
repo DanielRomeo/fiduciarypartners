@@ -1,10 +1,12 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 "use client";
 
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { motion } from "framer-motion";
 
 const About = () => {
-  const values = [
+  const values: any = [
     {
       title: "Integrity",
       description:
@@ -55,7 +57,7 @@ const About = () => {
     },
   ];
 
-  const team = [
+  const team: any = [
     {
       name: "Sarah Mitchell",
       position: "Founding Partner & CEO",
@@ -86,7 +88,7 @@ const About = () => {
     },
   ];
 
-  const containerVariants = {
+  const containerVariants: any = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -96,7 +98,7 @@ const About = () => {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: any = {
     hidden: { y: 50, opacity: 0 },
     visible: {
       y: 0,
@@ -124,7 +126,7 @@ const About = () => {
                   About <span className="highlight">Fiduciary Partners</span>
                 </h1>
                 <p className="hero-subtitle">
-                  We're a forward-thinking legal services firm dedicated to
+                  Were a forward-thinking legal services firm dedicated to
                   democratizing access to quality legal support for businesses
                   of all sizes. Our mission is to remove barriers and empower
                   entrepreneurs to succeed.
@@ -162,7 +164,7 @@ const About = () => {
                   businesses rather than constraining them.
                 </p>
                 <p>
-                  Today, we've helped over 1,000 businesses establish strong
+                  Today, weve helped over 1,000 businesses establish strong
                   legal foundations, maintain compliance, and scale successfully
                   across various industries.
                 </p>
