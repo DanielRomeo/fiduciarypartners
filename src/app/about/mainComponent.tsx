@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 "use client";
 // pages/about.js
 import { Container, Row, Col, Card } from "react-bootstrap";
@@ -159,7 +161,7 @@ const About = () => {
                 animate="visible"
                 variants={containerVariants}
               >
-                {values.map((value, index) => (
+                {values.map((value:any, index:number) => (
                   <motion.div key={index} variants={itemVariants}>
                     <Card className="mb-4">
                       <Card.Body>

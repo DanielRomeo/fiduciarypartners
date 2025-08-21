@@ -214,7 +214,7 @@ const About = () => {
               Our <span className="highlight">Values</span>
             </h2>
             <Row>
-              {values.map((value, index) => (
+              {values.map((value: any, index: number) => (
                 <Col lg={6} className="mb-4" key={index}>
                   <motion.div variants={itemVariants}>
                     <Card className="service-card">
@@ -243,7 +243,7 @@ const About = () => {
               Meet Our <span className="highlight">Team</span>
             </h2>
             <Row>
-              {team.map((member, index) => (
+              {team.map((member:any, index:number) => (
                 <Col lg={3} md={6} className="mb-4" key={index}>
                   <motion.div variants={itemVariants}>
                     <Card className="service-card text-center">
@@ -264,7 +264,7 @@ const About = () => {
                       >
                         {member.name
                           .split(" ")
-                          .map((n) => n[0])
+                          .map((n:string) => n[0])
                           .join("")}
                       </div>
                       <h4>{member.name}</h4>

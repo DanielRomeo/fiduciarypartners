@@ -1,10 +1,12 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 "use client";
 
 import { Container, Row, Col, Card, Button, Badge } from "react-bootstrap";
 import { motion } from "framer-motion";
 
 const Pricing = () => {
-  const pricingPlans = [
+  const pricingPlans:any = [
     {
       name: "Starter",
       price: "R2,500",
@@ -87,7 +89,7 @@ const Pricing = () => {
     },
   ];
 
-  const additionalServices = [
+  const additionalServices:any = [
     {
       name: "One-time Company Formation",
       price: "R3,500",
@@ -120,7 +122,7 @@ const Pricing = () => {
     },
   ];
 
-  const handlePlanSelection = (plan) => {
+  const handlePlanSelection = (plan:any) => {
     const emailBody = `Hello Fiduciary Partners,
 
 I am interested in learning more about your ${plan.name} plan priced at ${plan.price}${plan.period}.
@@ -174,7 +176,7 @@ Best regards,
     window.location.href = mailtoLink;
   };
 
-  const containerVariants = {
+  const containerVariants:any = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -184,7 +186,7 @@ Best regards,
     },
   };
 
-  const itemVariants = {
+  const itemVariants:any = {
     hidden: { y: 50, opacity: 0 },
     visible: {
       y: 0,
@@ -232,7 +234,7 @@ Best regards,
             variants={containerVariants}
           >
             <Row>
-              {pricingPlans.map((plan, index) => (
+              {pricingPlans.map((plan:any, index:number) => (
                 <Col lg={3} md={6} className="mb-4" key={index}>
                   <motion.div variants={itemVariants}>
                     <Card
@@ -299,7 +301,7 @@ Best regards,
                           marginBottom: "2rem",
                         }}
                       >
-                        {plan.features.map((feature, fIndex) => (
+                        {plan.features.map((feature:any, fIndex:number) => (
                           <li
                             key={fIndex}
                             style={{
@@ -370,7 +372,7 @@ Best regards,
               Need something specific? Choose from our s la carte services
             </p>
             <Row>
-              {additionalServices.map((service, index) => (
+              {additionalServices.map((service:any, index:number) => (
                 <Col lg={4} md={6} className="mb-4" key={index}>
                   <motion.div variants={itemVariants}>
                     <Card className="service-card">

@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 "use client";
 import React, { useState } from "react";
 import { Nav, NavDropdown, Navbar, Container } from "react-bootstrap";
@@ -81,7 +83,7 @@ const NavbarMain: React.FC = () => {
               className={styles.navDropdown}
               onSelect={handleSelect}
             >
-              {services.map((service, index) => {
+              {services.map((service:any, index:number) => {
                 const href = `/services/${service.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
                 return (
                   <NavDropdown.Item

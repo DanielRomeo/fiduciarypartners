@@ -5,6 +5,7 @@
 import { Container, Row, Col, Button, Card, Carousel } from "react-bootstrap";
 import { motion } from "framer-motion";
 import styles from "./styles/home.module.scss";
+import Image from "next/image";
 
 const Home = () => {
   const services: any = [
@@ -89,11 +90,14 @@ const Home = () => {
         <Carousel fade interval={4000} controls indicators>
           <Carousel.Item>
             <div className={styles.heroSlide}>
-              <img
+              <Image
                 className="d-block w-100"
                 src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=1600&q=80"
                 alt="Law firm advisory"
+               
+                priority
               />
+              
               <div className={styles.overlay}>
                 <Container>
                   <Row className="justify-content-center text-center">
@@ -120,7 +124,7 @@ const Home = () => {
 
           <Carousel.Item>
             <div className={styles.heroSlide}>
-              <img
+              <Image
                 className="d-block w-100"
                 src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80"
                 alt="Corporate law"
@@ -150,7 +154,7 @@ const Home = () => {
 
           <Carousel.Item>
             <div className={styles.heroSlide}>
-              <img
+              <Image
                 className="d-block w-100"
                 src="https://images.unsplash.com/photo-1528740561666-dc2479dc08ab?auto=format&fit=crop&w=1600&q=80"
                 alt="Courtroom"
